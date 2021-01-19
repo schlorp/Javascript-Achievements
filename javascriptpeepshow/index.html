@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Peepshow</title>
+</head>
+<body>
+    <button onclick="document.getElementById('image').src='img/grogu.jpg'" id="button" >pay $5</button>
+    <h4>money: $ 100</h4>
+    <h4>time: sec 0.00</h4>
+    <img src="img/curtain.jpg" alt="a theater curtain" id="image">
+    <script>
+        var image = document.getElementById("image")
+        function pictureChange()
+        {
+            document.getElementById('image').src='img/curtain.jpg'
+        }
+        
+        document.getElementById("image").addEventListener("change",()=>{
+            setTimeout(change(), 1000)
+
+        });
+
+        //document.getElementById("button").addEventListener("click",(e)=>{
+
+            //if (image.src == "img/grogu.jpg")
+                //setTimeout(change(), 1000)
+
+        //});       
+    </script>
+</body>
+</html>

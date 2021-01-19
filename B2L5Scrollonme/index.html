@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Scroll on me</title>
+        <script>
+            window.onload = function() {
+                var scrolltext = document.getElementById("scrolltext");
+                var copytext = document.getElementById("copytext");
+                var resetButton = document.getElementById("resetButton");
+                
+                scrolltext.addEventListener("wheel", ()=>{ scrolltext.innerHTML += "!" });
+
+                copytext.addEventListener("copy", ()=>{copytext.innerHTML += "!" });
+                
+                resetButton.addEventListener("click", ()=>{scrolltext.innerHTML = "Scroll me"; copytext.innerHTML = "copy me"});
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="scrolltext">Scroll me</h1>
+        <h1 id="copytext">copy me</h1>
+        <input type="button" id="resetButton" value="Reset"/>
+    </body>
+</html>
