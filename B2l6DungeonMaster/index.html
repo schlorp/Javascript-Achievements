@@ -1,33 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dungeon Master</title>
 </head>
-<style>
-    #button{
-        margin-top: 10px;
-    }
-</style>
 <body>
-    <input type="button" id="button" value="roll it"></input>
-    <p id="wank">...</p>
+    <div>
+        <button type="button" id="button">Roll For Stats</button>
+        <button type="button" id="button2">Reset</button>
+
+        <div>
+            <p id="stats">Stats:</p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
 </body>
-<script>
-    let wank = document.getElementById("wank");
-
-    document.getElementById("button").addEventListener("click", rollingForStat());
-
-        function rollingForStat(){
-            var nummers1 = [];
-            for (var i = 0; i < 4; i++){
-            var nummers = [1, 2, 3, 4, 5, 6]
-                const random = nummers[Math.floor(Math.random() * nummers.length)];
-                nummers1.push(random);
-            }
-            return "#" + nummers1.join("")
-            wank.innerHTML = nummers1
-
-            
-        }
-</script>
 </html>
