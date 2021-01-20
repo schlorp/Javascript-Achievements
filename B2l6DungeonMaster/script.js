@@ -7,8 +7,6 @@ const nummers = [];
 
 
 button.addEventListener('click', () => {
-    // Generate 4 randmers.
-    for (let i = 1; i < 4; i++) randomizer(i);
     // Put the 4 random numbers between 1 and 6 in a empty list.
     for (let i = 0; i < 4; i++) nummers.push(randomizer());;
 
